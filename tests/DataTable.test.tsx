@@ -1,10 +1,10 @@
-import { act, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import { act, render, screen } from '@testing-library/react';
 import React from 'react';
-import DataTable from './DataTable';
+import userEvent from '@testing-library/user-event';
 
-import { MockMembers, MockMembersTableColumns } from '../data/mocks';
+import { MockMembers, MockMembersTableColumns } from '../src/data/mocks';
+import { DataTable } from '../src';
 
 describe('components/DataTable', () => {
   test('should render 2 rows and 5 columns', () => {

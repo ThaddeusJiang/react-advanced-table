@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
+
 import { Member } from '../data/interfaces';
 
 type MemberAvatarProps = {
   member: Member;
 };
 
-const MemberAvatar: FC<MemberAvatarProps> = ({ member }) => {
+export const MemberAvatar: FC<MemberAvatarProps> = ({ member }) => {
   return (
     <div className="flex space-x-4">
       <img
@@ -19,5 +20,3 @@ const MemberAvatar: FC<MemberAvatarProps> = ({ member }) => {
     </div>
   );
 };
-
-export default MemberAvatar;

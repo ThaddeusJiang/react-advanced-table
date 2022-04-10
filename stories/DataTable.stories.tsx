@@ -1,9 +1,8 @@
+import { DataTable, MemberAvatar } from '../src';
+import { MockMembers, MockMembersTableColumns } from '../src/data/mocks';
 import React, { useMemo } from 'react';
-import MemberAvatar from '../MemberAvatar/MemberAvatar';
-import { Member } from '../data/interfaces';
-import { MockMembers, MockMembersTableColumns } from '../data/mocks';
 
-import DataTable from './DataTable';
+import { Member } from '../src/data/interfaces';
 
 export default {
   title: 'components/DataTable',

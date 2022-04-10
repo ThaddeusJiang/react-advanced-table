@@ -21,7 +21,7 @@ type Props = {
   onSortChange?: (value: Sort) => void;
 };
 
-const DataTable: FC<Props> = ({ columns, data, sort, onSortChange }) => {
+export const DataTable: FC<Props> = ({ columns, data, sort, onSortChange }) => {
   const defaultColumn = useMemo(
     () => ({
       // When using the useFlexLayout:
@@ -133,5 +133,3 @@ const DataTable: FC<Props> = ({ columns, data, sort, onSortChange }) => {
     </div>
   );
 };
-
-export default DataTable;

@@ -1,9 +1,11 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  content: [],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: false,
+  },
 };
