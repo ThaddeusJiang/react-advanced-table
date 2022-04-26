@@ -7,3 +7,14 @@ export interface Member {
   address: string;
   avatar: string;
 }
+
+export interface TableColumn {
+  id: string;
+  name: string;
+}
+
+export interface View {
+  id: string;
+  name: string;
+  columns: TableColumn[];
+}

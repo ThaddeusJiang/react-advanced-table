@@ -19,7 +19,7 @@ export const MockMembers = [
   },
 ];
 
-export const MockMembersTableColumns = [
+export const MockReactTableColumns = [
   {
     Header: 'name',
     accessor: 'name',
@@ -40,5 +40,46 @@ export const MockMembersTableColumns = [
   {
     Header: 'address',
     accessor: 'address',
+  },
+];
+
+export const MockColumns = [
+  {
+    id: '1',
+    name: 'Name',
+    key: 'name',
+  },
+  {
+    id: '2',
+    name: 'Kana',
+    key: 'kana',
+  },
+  {
+    id: '3',
+    name: 'Mail',
+    key: 'mail',
+  },
+  {
+    id: '4',
+    name: 'Phone',
+    key: 'phone',
+  },
+  {
+    id: '5',
+    name: 'Address',
+    key: 'address',
+  },
+];
+
+export const MockViews = [
+  {
+    id: '1',
+    name: 'View 1',
+    columns: MockColumns.slice(0, 3),
+  },
+  {
+    id: '2',
+    name: 'View 2',
+    columns: [],
   },
 ];

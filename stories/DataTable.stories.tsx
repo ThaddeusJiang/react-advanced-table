@@ -1,5 +1,5 @@
 import { DataTable, MemberAvatar } from '../src';
-import { MockMembers, MockMembersTableColumns } from '../src/data/mocks';
+import { MockMembers, MockReactTableColumns } from '../src/data/mocks';
 import React, { useMemo } from 'react';
 
 import { Member } from '../src/data/interfaces';
@@ -10,7 +10,7 @@ export default {
 };
 
 export const TextTable = () => {
-  const columns = useMemo(() => MockMembersTableColumns, []);
+  const columns = useMemo(() => MockReactTableColumns, []);
 
   return (
     <DataTable columns={columns} data={MockMembers} sort={['name', 'asc']} />

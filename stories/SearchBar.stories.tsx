@@ -2,7 +2,6 @@ import { Meta } from '@storybook/react';
 import React from 'react';
 import { SearchBar } from '../src';
 
-
 export default {
   component: SearchBar,
   title: 'components/SearchBar',
@@ -14,7 +13,7 @@ export default {
 export const Basic: React.VFC = () => {
   return (
     <div>
-      <SearchBar />
+      <SearchBar views={[]} view={undefined} />
     </div>
   );
 };

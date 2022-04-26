@@ -3,12 +3,12 @@ import { act, render, screen } from '@testing-library/react';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
 
-import { MockMembers, MockMembersTableColumns } from '../src/data/mocks';
+import { MockMembers, MockReactTableColumns } from '../src/data/mocks';
 import { DataTable } from '../src';
 
 describe('components/DataTable', () => {
   test('should render 2 rows and 5 columns', () => {
-    render(<DataTable columns={MockMembersTableColumns} data={MockMembers} />);
+    render(<DataTable columns={MockReactTableColumns} data={MockMembers} />);
 
     expect(screen.getByText('name')).toBeInTheDocument();
     expect(screen.getByText('kana')).toBeInTheDocument();
@@ -28,7 +28,7 @@ describe('components/DataTable', () => {
 
     render(
       <DataTable
-        columns={MockMembersTableColumns}
+        columns={MockReactTableColumns}
         data={MockMembers}
         onSortChange={onSortChange}
       />

@@ -1,13 +1,17 @@
 import { DataTable, MemberAvatar, SearchBar } from '../src';
-import { MockMembers, MockMembersTableColumns } from '../src/data/mocks';
+import {
+  MockColumns,
+  MockMembers,
+  MockReactTableColumns,
+  MockViews,
+} from '../src/data/mocks';
 import React, { useMemo } from 'react';
 
 import { Collapse } from '../src/components/Collapse';
 import { Member } from '../src/data/interfaces';
 
-
 export default {
-  title: 'components/AdvancedDataTable',
+  title: 'examples/AdvancedDataTable',
   component: DataTable,
 };
 
@@ -44,13 +48,19 @@ export const FullFeaturesExample = () => {
     []
   );
 
+  const view = {
+    id: 'view-01',
+    name: 'View 01',
+    columns: MockColumns.splice(0, 2),
+  };
+
   return (
     <section>
       <h1 className=" font-semibold text-xl px-4">
         Advanced Table - full features example
       </h1>
       <Collapse title="Advanced Search">
-        <SearchBar />
+        <SearchBar views={MockViews} view={view} />
       </Collapse>
       {/* @ts-ignore FIXME: type */}
       <DataTable columns={columns} data={MockMembers} />

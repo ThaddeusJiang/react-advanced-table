@@ -14,7 +14,7 @@ env:
 
 jobs:
   test-frontend:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2
@@ -24,15 +24,11 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
-      - name: 'install, build'
+      - name: 'install, build, test'
         shell: bash
         run: |
           pushd './'
           yarn install
           yarn build
+          yarn test
           popd
-      - name: Jest coverage report (frontend)
-        uses: ArtiomTr/jest-coverage-report-action@v2.0-rc.5
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          package-manager: yarn
